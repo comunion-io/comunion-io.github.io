@@ -1,0 +1,516 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  color: #333333;
+  line-height: 1.5;
+}
+
+html,
+body {
+  width: 100vw;
+}
+
+html {
+  font-size: 100px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-content {
+  min-width: 7.5rem;
+}
+
+.h1 {
+  font-size: 0.26rem;
+  font-weight: 600;
+  margin-bottom: 0.36rem;
+}
+
+.text {
+  width: 86%;
+  font-size: 0.16rem;
+  font-weight: 600;
+  line-height: 0.24rem;
+  letter-spacing: 0;
+  color: #666666;
+}
+
+.card-text {
+  font-size: 0.16rem;
+  font-weight: 600;
+  text-align: left;
+  color: #666666;
+  letter-spacing: 0;
+}
+
+.card-title {
+  font-size: 0.24rem;
+  font-weight: 600;
+  text-align: left;
+  line-height: 0.24rem;
+  letter-spacing: 0;
+}
+
+.layout {
+  width: 11.1rem;
+  margin: 0 auto;
+}
+
+.footer {
+  width: 100%;
+  height: 2rem;
+  background-image: url(./assets/footer.png);
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.footer-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.middle {
+  align-items: center;
+}
+
+.center {
+  justify-content: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cards-container > li {
+  margin-bottom: 0.3rem;
+}
+
+.space-h70 {
+  height: 0.7rem;
+}
+
+.m-t36 {
+  margin-top: 0.36rem;
+}
+
+.m-t16 {
+  margin-top: 0.16rem;
+}
+
+.m-b16 {
+  margin-bottom: 0.16rem;
+}
+
+.divider-mark {
+  width: 1.6rem;
+  height: 0.04rem;
+  margin: 0.36rem 0;
+  background-color: #7b88ff;
+}
+
+.article-bg {
+  background-image: url(./assets/bg.png);
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.selected-card {
+  box-shadow: 0 0.02rem 0.08rem 0 rgba(92, 107, 138, 0.5);
+  border: 0.01rem solid transparent;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.selected-card:hover {
+  border-color: #005afc;
+}
+
+/** home header **/
+.header {
+  display: flex;
+  align-items: center;
+  height: 0.6rem;
+}
+
+.logo {
+  height: 0.24rem;
+  width: 1.36rem;
+  background-image: url(./assets/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 0.2rem;
+}
+
+.home-icon {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  font-size: 0.16rem;
+  font-weight: 600;
+  user-select: none;
+}
+
+.nav-item {
+  margin: 0 0.16rem;
+  cursor: pointer;
+}
+
+.nav-item-arrow:after {
+  margin-left: 0.1rem;
+  content: '>';
+  transform: rotate(90deg) translateX(0.01rem);
+}
+
+.nav-item:hover,
+.nav-item:hover > a {
+  color: #005afc;
+}
+
+.sub-nav-wrapper {
+  position: relative;
+  z-index: 100;
+  height: 100%;
+}
+
+.sub-nav-wrapper:hover .sub-nav {
+  height: 2.3rem;
+  padding: 0.16rem;
+}
+
+.sub-nav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0.6rem;
+  height: 0;
+  padding: 0 0.16rem;
+  border-radius: 0 0 0.1rem 0.1rem;
+  transition: all 0.5s;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.sub-nav-item {
+  height: 0.32rem;
+  line-height: 0.32rem;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.sub-nav-item:hover > a {
+  color: #005afc;
+}
+
+.go-comunion {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.go-comunion-btn {
+  height: 0.32rem;
+  line-height: 0.32rem;
+  border-radius: 0.16rem;
+  background-color: #fff;
+  border: 0.01rem solid #005afc;
+  color: #005afc;
+  padding: 0 0.1rem;
+  cursor: pointer;
+  font-size: 0.16rem;
+}
+
+.go-comunion-btn:hover {
+  background-color: #005afc;
+  color: #fff;
+}
+
+/** banner **/
+.banner {
+  height: 5.2rem;
+  width: 100%;
+  object-fit: fill;
+}
+
+/** Comunion is a next, new start-up paradigm of digital economic growth **/
+.digital-economic-growth {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.digital-economic-growth-crad {
+  width: 2.6rem;
+  height: 3.7rem;
+  border-radius: 0.1rem;
+  margin-bottom: 0.16rem;
+}
+
+/** The mission and vision of Comunion is to settle **/
+.mission-vision-card {
+  width: 5.4rem;
+  height: 4rem;
+  padding: 0.36rem 0.48rem 0;
+  border-radius: 0.04rem;
+}
+
+.mission-vision-card-icon {
+  height: 1.1rem;
+  width: 1.6rem;
+  object-fit: fill;
+}
+
+.mission-vision-card-title {
+  height: 0.48rem;
+  text-align: center;
+  margin: 0.2rem 0 0.1rem;
+}
+
+/** What can you do with Comunion **/
+.with-comunion-card {
+  width: 4.8rem;
+  height: 2.1rem;
+  padding: 0.3rem 0.24rem;
+  border-radius: 0.08rem;
+}
+
+.with-comunion-card-icon {
+  width: 0.53rem;
+  height: 0.53rem;
+  margin-right: 0.2rem;
+}
+
+/** How to use Comunion **/
+.use-comunion-card {
+  width: 3.2rem;
+  height: 2.3rem;
+}
+
+.use-comunion-card-img {
+  width: 1.6rem;
+  height: 1.05rem;
+}
+
+.use-comunion-card-title {
+  margin: 0.16rem 0;
+}
+
+.from-info {
+  font-size: 0.24rem;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #666666;
+}
+
+/** about info **/
+.abouts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+
+.abouts-title {
+  font-size: 0.24rem;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+  line-height: 0.24rem;
+  margin-bottom: 0.3rem;
+}
+
+.abouts-links > li {
+  font-size: 0.24rem;
+  margin-bottom: 0.2rem;
+}
+
+.abouts-links > li > a {
+  font-size: 0.24rem;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  line-height: 0.24rem;
+  color: #666666;
+}
+
+.abouts-links > li > a:hover {
+  color: #005afc;
+}
+
+@media (max-device-width: 768px) and (max-width: 768px) {
+  html {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    min-width: unset;
+    max-width: 100%;
+  }
+
+  .logo {
+    height: 0.28rem;
+    width: 0.29rem;
+    background-image: url(./assets/logo_favicon.png);
+    background-size: contain;
+  }
+
+  .home-icon {
+    position: relative;
+    display: inline-block;
+    height: 0.22rem;
+    width: 0.26rem;
+    background-image: url(./assets/home-icon.png);
+    background-size: contain;
+  }
+
+  .nav-expand {
+    transition: all 0.3s;
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    height: fit-content;
+    padding: 0.16rem;
+
+    position: relative;
+    z-index: 10;
+    top: 1rem;
+    left: 0.2rem;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .nav-item-arrow:after {
+    transform: rotate(0deg) translateX(0.01rem);
+  }
+
+  .nav-expand .sub-nav {
+    top: 0;
+    left: calc(100% + 0.36rem);
+    border-radius: 0.1rem;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .layout {
+    width: 100%;
+    padding: 0 0.16rem;
+  }
+
+  .banner {
+    width: 100%;
+    height: calc(100vw - 50%);
+  }
+
+  .divider-mark {
+    margin: 0.36rem auto;
+  }
+
+  .digital-economic-growth {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .digital-economic-growth > img {
+    margin-bottom: 0.3rem;
+  }
+
+  .digital-economic-growth > img:last-child {
+    margin-bottom: 0.16rem;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .cards-container > .mission-vision-card {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 0.3rem;
+    padding: 0.36rem 0.2rem 0.16rem;
+  }
+
+  .cards-container > .mission-vision-card:last-child {
+    margin-bottom: 0.16rem;
+  }
+
+  .cards-container > .mission-vision-card > .mission-vision-card-title {
+    height: fit-content;
+  }
+
+  .cards-container > .with-comunion-card {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 0.3rem;
+    padding-bottom: 0.16rem;
+  }
+
+  .cards-container > .with-comunion-card:last-child {
+    margin-bottom: 0.16rem;
+  }
+
+  .cards-container > .use-comunion-card {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 0.3rem;
+    padding-bottom: 0.16rem;
+  }
+
+  .cards-container > .use-comunion-card:last-child {
+    margin-bottom: 0.16rem;
+  }
+
+  .abouts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 0.7rem;
+  }
+
+  .abouts > article {
+    width: 100%;
+  }
+
+  .abouts > article:not(:last-child) {
+    margin-bottom: 0.36rem;
+  }
+
+  .footer {
+    height: 0.8rem;
+  }
+}
