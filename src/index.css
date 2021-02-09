@@ -390,6 +390,7 @@ a {
     width: 0.26rem;
     background-image: url(./assets/home-icon.png);
     background-size: contain;
+    cursor: pointer;
   }
 
   .nav-expand {
@@ -429,7 +430,7 @@ a {
 
   .banner {
     width: 100%;
-    height: calc(100vw - 50%);
+    height: calc(100vw - 47%);
   }
 
   .divider-mark {
