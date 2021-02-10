@@ -30,6 +30,7 @@ a {
 
 .h1 {
   font-size: 0.26rem;
+  line-height: 1;
   font-weight: 600;
   margin-bottom: 0.36rem;
 }
@@ -38,7 +39,6 @@ a {
   width: 86%;
   font-size: 0.16rem;
   font-weight: 600;
-  line-height: 0.24rem;
   letter-spacing: 0;
   color: #666666;
 }
@@ -55,7 +55,7 @@ a {
   font-size: 0.24rem;
   font-weight: 600;
   text-align: left;
-  line-height: 0.24rem;
+  line-height: 1;
   letter-spacing: 0;
 }
 
@@ -66,7 +66,7 @@ a {
 
 .footer {
   width: 100%;
-  height: 2rem;
+  height: 14.9vw;
   background-image: url(./assets/footer.png);
   background-size: 100% 100%;
   background-position: center;
@@ -168,6 +168,11 @@ a {
   display: none;
 }
 
+.nav-container {
+  flex: 1;
+  height: 100%;
+}
+
 .nav {
   display: flex;
   flex-direction: row;
@@ -183,10 +188,11 @@ a {
   cursor: pointer;
 }
 
-.nav-item-arrow:after {
-  margin-left: 0.1rem;
-  content: '>';
-  transform: rotate(90deg) translateX(0.01rem);
+.nav-item-arrow {
+  height: 0.1rem;
+  width: 0.14rem;
+  margin-left: 0.12rem;
+  transform: translateY(0.02rem);
 }
 
 .nav-item:hover,
@@ -197,7 +203,6 @@ a {
 .sub-nav-wrapper {
   position: relative;
   z-index: 100;
-  height: 100%;
 }
 
 .sub-nav-wrapper:hover .sub-nav {
@@ -209,7 +214,7 @@ a {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 0.6rem;
+  top: 0.38rem;
   height: 0;
   padding: 0 0.16rem;
   border-radius: 0 0 0.1rem 0.1rem;
@@ -227,12 +232,6 @@ a {
 
 .sub-nav-item:hover > a {
   color: #005afc;
-}
-
-.go-comunion {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .go-comunion-btn {
@@ -343,20 +342,20 @@ a {
   font-family: PingFangSC, PingFangSC-Medium;
   font-weight: 500;
   color: #333333;
-  line-height: 0.24rem;
+  line-height: 1;
   margin-bottom: 0.3rem;
 }
 
 .abouts-links > li {
   font-size: 0.24rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.24rem;
 }
 
 .abouts-links > li > a {
   font-size: 0.24rem;
   font-family: PingFangSC, PingFangSC-Regular;
   font-weight: 400;
-  line-height: 0.24rem;
+  line-height: 1;
   color: #666666;
 }
 
@@ -377,70 +376,138 @@ a {
   }
 
   .logo {
-    height: 0.28rem;
-    width: 0.29rem;
+    height: 0.42rem;
+    width: 0.43rem;
     background-image: url(./assets/logo_favicon.png);
     background-size: contain;
+    margin-right: 0.36rem;
   }
 
   .home-icon {
     position: relative;
     display: inline-block;
-    height: 0.22rem;
-    width: 0.26rem;
+    height: 0.33rem;
+    width: 0.39rem;
     background-image: url(./assets/home-icon.png);
     background-size: contain;
     cursor: pointer;
-  }
-
-  .nav-expand {
-    transition: all 0.3s;
-    display: flex !important;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #fff;
-    height: fit-content;
-    padding: 0.16rem;
-
-    position: relative;
-    z-index: 10;
-    top: 1rem;
-    left: 0.2rem;
-    border-radius: 0 0 8px 8px;
-  }
-
-  .nav-item-arrow:after {
-    transform: rotate(0deg) translateX(0.01rem);
-  }
-
-  .nav-expand .sub-nav {
-    top: 0;
-    left: calc(100% + 0.36rem);
-    border-radius: 0.1rem;
+    user-select: none;
   }
 
   .nav {
     display: none;
+    position: absolute;
+    z-index: 10;
+    top: 1rem;
+    left: 0;
+    width: 0;
+    height: 0;
+    transition: all 0.5s;
+  }
+
+  .nav-expand {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 7.8rem;
+    width: 100%;
+    padding: 0.32rem;
+    background-color: #f9f9f9;
+    font-size: 0.32rem;
+    box-shadow: 0 0.02rem 0.08rem 0 rgba(92, 107, 138, 0.5);
+  }
+
+  .nav-expand .sub-nav-wrapper {
+    position: unset;
+    height: fit-content;
+  }
+
+  .nav-expand .sub-nav {
+    margin-top: 0.32rem;
+    position: unset;
+    height: fit-content;
+    border: unset;
+    transition: unset;
+    line-height: 1;
+    background-color: #f9f9f9;
+    padding: 0 0.32rem;
+  }
+
+  .nav-expand .sub-nav > li:not(:last-child) {
+    margin-bottom: 0.32rem;
+  }
+
+  .nav-expand .sub-nav > li > a {
+    line-height: unset;
+  }
+
+  .nav-expand .sub-nav-wrapper:hover .sub-nav {
+    height: fit-content;
+    padding: 0 0.32rem;
+  }
+
+  .nav-expand > li:not(:last-child) {
+    margin-bottom: 0.24rem;
+  }
+
+  .sub-nav-wrapper {
+    align-items: stretch;
+  }
+
+  .nav-item-arrow {
+    width: 0.28rem;
+    height: 0.2rem;
+    margin-left: 0.24rem;
   }
 
   .layout {
     width: 100%;
-    padding: 0 0.16rem;
+    padding: 0 0.64rem;
+  }
+
+  .h1 {
+    font-size: 0.48rem;
+  }
+
+  .text {
+    font-size: 0.3rem;
+    width: 100%;
   }
 
   .banner {
     width: 100%;
-    height: calc(100vw - 47%);
+    height: 47vw;
+  }
+
+  .card-title {
+    font-size: 0.3rem;
+  }
+
+  .card-text {
+    font-size: 0.24rem;
   }
 
   .divider-mark {
     margin: 0.36rem auto;
   }
 
+  .header {
+    height: 1rem;
+  }
+
+  .go-comunion-btn {
+    height: 0.5rem;
+    line-height: 0.5rem;
+    border-radius: 0.25rem;
+    padding: 0 0.24rem;
+    font-size: 0.28rem;
+  }
+
   .digital-economic-growth {
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .digital-economic-growth > img {
@@ -449,6 +516,11 @@ a {
 
   .digital-economic-growth > img:last-child {
     margin-bottom: 0.16rem;
+  }
+
+  .digital-economic-growth-crad {
+    width: 2.8rem;
+    height: 4rem;
   }
 
   .cards-container {
@@ -462,7 +534,7 @@ a {
     width: 100%;
     height: fit-content;
     margin-bottom: 0.3rem;
-    padding: 0.36rem 0.2rem 0.16rem;
+    padding: 0.36rem 0.6rem;
   }
 
   .cards-container > .mission-vision-card:last-child {
@@ -471,13 +543,14 @@ a {
 
   .cards-container > .mission-vision-card > .mission-vision-card-title {
     height: fit-content;
+    margin-bottom: 0.24rem;
   }
 
   .cards-container > .with-comunion-card {
     width: 100%;
     height: fit-content;
     margin-bottom: 0.3rem;
-    padding-bottom: 0.16rem;
+    padding: 0.36rem 0.6rem;
   }
 
   .cards-container > .with-comunion-card:last-child {
@@ -495,6 +568,10 @@ a {
     margin-bottom: 0.16rem;
   }
 
+  .from-info {
+    font-size: 0.32rem;
+  }
+
   .abouts {
     display: flex;
     flex-direction: column;
@@ -503,15 +580,16 @@ a {
     margin-top: 0.7rem;
   }
 
+  .abouts-title {
+    font-size: 0.3rem;
+    margin-bottom: 0.32rem;
+  }
+
   .abouts > article {
     width: 100%;
   }
 
   .abouts > article:not(:last-child) {
     margin-bottom: 0.36rem;
-  }
-
-  .footer {
-    height: 0.8rem;
   }
 }
