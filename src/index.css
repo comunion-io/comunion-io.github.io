@@ -30,10 +30,6 @@ a {
   height: 100%;
 }
 
-.main-content {
-  min-width: 7.5rem;
-}
-
 .h1 {
   font-size: 0.26rem;
   line-height: 1;
@@ -66,8 +62,8 @@ a {
 }
 
 .layout {
+  max-width: 11.1rem;
   margin: 0 auto;
-  padding: 0 0.2rem;
 }
 
 .footer {
@@ -395,11 +391,6 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-  .main-content {
-    min-width: unset;
-    max-width: 100%;
-  }
-
   .logo {
     height: 0.42rem;
     width: 0.43rem;
