@@ -5,6 +5,7 @@
   font-family: PingFangSC, PingFangSC-Semibold;
   color: #333333;
   line-height: 1.5;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,
@@ -22,6 +23,11 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.fullscreen {
+  width: 100%;
+  height: 100%;
 }
 
 .main-content {
@@ -66,17 +72,8 @@ a {
 
 .footer {
   width: 100%;
-  height: 14.9vw;
-  background-image: url(./assets/footer.png);
-  background-size: 100% 100%;
-  background-position: center;
-}
-
-.footer-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
+  background: url(./assets/footer.png) center/100% 100% no-repeat;
+  padding-bottom: 14.9%;
 }
 
 .row {
@@ -101,6 +98,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: stretch;
   flex-wrap: wrap;
 }
 
@@ -108,19 +106,19 @@ a {
   margin-bottom: 0.3rem;
 }
 
-.space-h70 {
-  height: 0.7rem;
+.mt-70 {
+  margin-top: 0.7rem;
 }
 
-.m-t36 {
+.mt-36 {
   margin-top: 0.36rem;
 }
 
-.m-t16 {
+.mt-16 {
   margin-top: 0.16rem;
 }
 
-.m-b16 {
+.mb-16 {
   margin-bottom: 0.16rem;
 }
 
@@ -227,7 +225,7 @@ a {
 .sub-nav-item {
   height: 0.32rem;
   line-height: 0.32rem;
-  width: fit-content;
+  width: max-content;
   white-space: nowrap;
 }
 
@@ -259,33 +257,48 @@ a {
   object-fit: cover;
 }
 
+.banner:after {
+  content: '';
+  display: inline-block;
+  padding-bottom: 46.85%;
+}
+
 /** Comunion is a next, new start-up paradigm of digital economic growth **/
 .digital-economic-growth {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
 }
 
 .digital-economic-growth-crad {
-  width: 2.6rem;
-  height: 3.7rem;
+  width: 23.5%;
   border-radius: 0.1rem;
   margin-bottom: 0.16rem;
 }
 
+.digital-economic-growth-crad:after {
+  content: '';
+  display: inline-block;
+  padding-bottom: 142.3%;
+}
+
 /** The mission and vision of Comunion is to settle **/
 .mission-vision-card {
-  width: 5.4rem;
-  height: 4rem;
-  padding: 0.36rem 0.48rem 0;
+  width: 48.5%;
+  padding: 0.36rem 0.48rem;
   border-radius: 0.04rem;
 }
 
 .mission-vision-card-icon {
-  height: 1.1rem;
-  width: 1.6rem;
+  width: 29.63%;
   object-fit: fill;
+}
+
+.mission-vision-card-icon:after {
+  content: '';
+  display: inline-block;
+  padding-bottom: 68.75%;
 }
 
 .mission-vision-card-title {
@@ -296,8 +309,7 @@ a {
 
 /** What can you do with Comunion **/
 .with-comunion-card {
-  width: 4.8rem;
-  height: 2.1rem;
+  width: 48.5%;
   padding: 0.3rem 0.24rem;
   border-radius: 0.08rem;
 }
@@ -310,13 +322,19 @@ a {
 
 /** How to use Comunion **/
 .use-comunion-card {
-  width: 3.2rem;
-  height: 2.3rem;
+  width: 32%;
+  margin-bottom: 0.36rem;
 }
 
 .use-comunion-card-img {
-  width: 1.6rem;
-  height: 1.05rem;
+  width: 50%;
+  object-fit: fill;
+}
+
+.use-comunion-card-img:after {
+  content: '';
+  display: inline-block;
+  padding-bottom: 62.5%;
 }
 
 .use-comunion-card-title {
@@ -348,12 +366,12 @@ a {
 }
 
 .abouts-links > li {
-  font-size: 0.2rem;
-  margin-bottom: 0.1rem;
+  font-size: 0.16rem;
+  margin-bottom: 0.16rem;
 }
 
 .abouts-links > li > a {
-  font-size: 0.2rem;
+  font-size: 0.16rem;
   font-family: PingFangSC, PingFangSC-Regular;
   font-weight: 400;
   line-height: 1;
@@ -426,13 +444,13 @@ a {
 
   .nav-expand .sub-nav-wrapper {
     position: unset;
-    height: fit-content;
+    height: max-content;
   }
 
   .nav-expand .sub-nav {
     margin-top: 0.32rem;
     position: unset;
-    height: fit-content;
+    height: max-content;
     border: unset;
     transition: unset;
     line-height: 1;
@@ -449,7 +467,7 @@ a {
   }
 
   .nav-expand .sub-nav-wrapper:hover .sub-nav {
-    height: fit-content;
+    height: max-content;
     padding: 0 0.32rem;
   }
 
@@ -513,16 +531,8 @@ a {
   }
 
   .digital-economic-growth > img {
+    width: 48%;
     margin-bottom: 0.3rem;
-  }
-
-  .digital-economic-growth > img:last-child {
-    margin-bottom: 0.16rem;
-  }
-
-  .digital-economic-growth-crad {
-    width: 3rem;
-    height: 4.3rem;
   }
 
   .cards-container {
@@ -534,7 +544,7 @@ a {
 
   .cards-container > .mission-vision-card {
     width: 100%;
-    height: fit-content;
+    height: max-content;
     margin-bottom: 0.3rem;
     padding: 0.36rem 0.6rem;
   }
@@ -544,13 +554,13 @@ a {
   }
 
   .cards-container > .mission-vision-card > .mission-vision-card-title {
-    height: fit-content;
+    height: max-content;
     margin-bottom: 0.24rem;
   }
 
   .cards-container > .with-comunion-card {
     width: 100%;
-    height: fit-content;
+    height: max-content;
     margin-bottom: 0.3rem;
     padding: 0.36rem 0.6rem;
   }
@@ -561,8 +571,7 @@ a {
 
   .cards-container > .use-comunion-card {
     width: 100%;
-    height: fit-content;
-    margin-bottom: 0.3rem;
+    height: max-content;
     padding-bottom: 0.16rem;
   }
 
@@ -593,5 +602,18 @@ a {
 
   .abouts > article:not(:last-child) {
     margin-bottom: 0.36rem;
+  }
+
+  .abouts-title {
+    font-size: 0.3rem;
+  }
+
+  .abouts-links > li {
+    font-size: 0.24rem;
+    margin-bottom: 0.24rem;
+  }
+
+  .abouts-links > li > a {
+    font-size: 0.24rem;
   }
 }
