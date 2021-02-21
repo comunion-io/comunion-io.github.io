@@ -133,13 +133,16 @@ a {
 
 .selected-card {
   box-shadow: 0 0.02rem 0.08rem 0 rgba(92, 107, 138, 0.5);
-  border: 0.01rem solid transparent;
   cursor: pointer;
   background-color: #fff;
+  position: relative;
+  transition: all 0.5s;
+  top: 0;
 }
 
 .selected-card:hover {
-  border-color: #005afc;
+  box-shadow: 0 0.02rem 0.08rem 0 #005afc;
+  top: -4px;
 }
 
 /** home header **/
@@ -411,7 +414,6 @@ a {
   }
 
   .nav {
-    display: none;
     position: absolute;
     z-index: 10;
     top: 1rem;
@@ -419,6 +421,8 @@ a {
     width: 0;
     height: 0;
     transition: all 0.5s;
+    background-color: #f9f9f9;
+    overflow: hidden;
   }
 
   .nav-expand {
@@ -428,7 +432,6 @@ a {
     height: 7.8rem;
     width: 100%;
     padding: 0.32rem;
-    background-color: #f9f9f9;
     font-size: 0.32rem;
     box-shadow: 0 0.02rem 0.08rem 0 rgba(92, 107, 138, 0.5);
   }
